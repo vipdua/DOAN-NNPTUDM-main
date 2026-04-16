@@ -415,7 +415,7 @@ doc.add_paragraph('Login thành công với username hợp lệ:')
 cypress_example = '''
 it('TC01 - Login thành công', () => {
     cy.get('input').eq(0).type('admin');
-    cy.get('input').eq(1).type('Long123@');
+    cy.get('input').eq(1).type('Admin123@');
     cy.get('button[type="submit"]').click();
     cy.url().should('include', '/admin/dashboard');
 });
@@ -471,8 +471,8 @@ for technique, description in testing_techniques:
 
 doc.add_heading('6.6. Test Cases mẫu (từ auth.cy.js)', level=2)
 test_cases = [
-    ('TC01', 'Login thành công', 'Username: admin, Password: Long123@'),
-    ('TC02', 'Sai username', 'Username: saiuser, Password: Long123@'),
+    ('TC01', 'Login thành công', 'Username: admin, Password: Admin123@'),
+    ('TC02', 'Sai username', 'Username: saiuser, Password: Admin123@'),
     ('TC03', 'Sai password', 'Username: admin, Password: sai123'),
     ('TC04', 'Bỏ trống form', 'Gửi form không điền dữ liệu'),
     ('TC05', 'Password cực ngắn', 'Username: admin, Password: 1'),
@@ -704,7 +704,7 @@ doc.add_paragraph(testing_setup)
 
 doc.add_heading('D. Tài khoản Admin Mặc định', level=2)
 doc.add_paragraph('Username: admin')
-doc.add_paragraph('Password: Long123@')
+doc.add_paragraph('Password: Admin123@')
 
 # Lưu document
 output_path = 'BAO_CAO_PHAN_TICH_HE_THONG.docx'

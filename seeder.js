@@ -3,7 +3,7 @@ const Role = require('./schemas/roles');
 const User = require('./schemas/users');
 const Cart = require('./schemas/carts');
 
-mongoose.connect('mongodb://localhost:27017/SangT4')
+mongoose.connect('mongodb://mongodb:27017/SangT4')
     .then(async () => {
         console.log("Connected to MongoDB for Seeding...");
 
@@ -22,12 +22,12 @@ mongoose.connect('mongodb://localhost:27017/SangT4')
             }
 
             // 2. Tạo Tài khoản Admin
-            let adminUser = await User.findOne({ email: 'tranhoalong2004@gmail.com' });
+            let adminUser = await User.findOne({ email: 'admin@gmail.com' });
             if (!adminUser) {
                 adminUser = await new User({
                     username: 'admin', // có thể giữ hoặc đổi
-                    password: 'Long123@',
-                    email: 'tranhoalong2004@gmail.com',
+                    password: 'Admin123@',
+                    email: 'admin@gmail.com',
                     role: adminRole._id
                 }).save();
 

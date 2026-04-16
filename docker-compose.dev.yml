@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  nodejs:
+    image: node:20-alpine
+    container_name: nodejs_DOAN-NNPTUDM-main
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm start"
+    networks:
+      - giencar_network
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - MONGO_URL=mongodb://mongodb:27017/giencar?replicaSet=rs0
+      - NODE_ENV=development
+networks:
+  giencar_network:
+    external: true

@@ -31,7 +31,7 @@ app.use('/api/v1/auth', require('./routes/auth'));
 app.use('/api/v1/carts', require('./routes/carts'));
 app.use('/api/v1/messages', require('./routes/messages'));
 //connect
-mongoose.connect('mongodb://127.0.0.1:27017/SangT4');
+mongoose.connect('mongodb://mongodb:27017/SangT4');
 mongoose.connection.on('connected', function () {
     console.log("connected");
 })
