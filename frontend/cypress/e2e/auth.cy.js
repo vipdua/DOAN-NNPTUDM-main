@@ -1,7 +1,7 @@
 describe('AUTH - LOGIN TEST (USERNAME)', () => {
 
     const username = 'admin';
-    const password = 'Long123@';
+    const password = 'Admin123@';
 
     beforeEach(() => {
         cy.visit('/login');
@@ -22,7 +22,7 @@ describe('AUTH - LOGIN TEST (USERNAME)', () => {
 
     it('TC02 - Sai username', () => {
         cy.get('input').eq(0).type('saiuser');
-        cy.get('input').eq(1).type('Long123@');
+        cy.get('input').eq(1).type('Admin123@');
 
         cy.get('button').click();
 
@@ -103,7 +103,7 @@ describe('AUTH - LOGIN TEST (USERNAME)', () => {
 
     it('TC10 - Login lưu token', () => {
         cy.get('input').eq(0).type('admin');
-        cy.get('input').eq(1).type('Long123@');
+        cy.get('input').eq(1).type('Admin123@');
 
         cy.get('button').click();
 

@@ -9,7 +9,7 @@ async function login(driver) {
     let inputs = await driver.findElements(By.css('input'));
 
     await inputs[0].sendKeys('admin');
-    await inputs[1].sendKeys('Long123@');
+    await inputs[1].sendKeys('Admin123@');
 
     await driver.findElement(By.xpath("//button[contains(text(),'Đăng Nhập')]")).click();
 

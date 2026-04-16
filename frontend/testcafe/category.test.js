@@ -20,7 +20,7 @@ const deleteBtn = Selector('button').find('svg').nth(1);
 async function loginAdmin(t) {
     await t
         .typeText(usernameInput, 'admin')
-        .typeText(passwordInput, 'Long123@')
+        .typeText(passwordInput, 'Admin123@')
         .click(loginBtn);
 
     await t.expect(Selector('body').innerText).notContains('Đăng nhập thất bại');
